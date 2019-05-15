@@ -26,8 +26,9 @@ body {
 .nav-items{
     padding: 0.5em;
     margin: 0.5em;
-    color: #1B548C;
+    color: white;
     text-align: center;
+    text-transform: uppercase;
     text-decoration: none;
     font-family: arial;
     font-size: 1em;
@@ -36,7 +37,7 @@ body {
 
 .nav-items:hover{
 	transition: color .9s;
-    color: #8C1B1B;
+    color: #162f66;
     text-decoration: underline;
     cursor: pointer;
 }
@@ -73,14 +74,21 @@ body {
 
 .content-link:hover{
     transition: color .9s;
-    color: #e3be1fe8;
+    color: #66e82e;
     text-decoration: underline;
 }
 
 .sidebar {
     grid-row: 2 / 4;
     grid-column: 3 / 4;
-    background-color: #1EAAFC;
+    background-color: #20ccba;
+    padding: 0 0 0 2px;
+    font-family: arial;
+    font-size: 1em;
+    -webkit-transition: all 2s ease-in-out;
+    -moz-transition: all 2s ease-in-out;
+    -o-transition: all 2s ease-in-out;
+    transition: all 2s ease-in-out;
 }
 
 .content {
