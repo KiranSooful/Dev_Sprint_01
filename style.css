@@ -1,3 +1,4 @@
+/* Main CSS Code for Desktops and standard size laptops */
 body {
     padding: 200px;
     background-color: #6d8faa;
@@ -5,7 +6,7 @@ body {
     justify-content: center;
     padding: 20px;
 }
-
+/* Setting the grid */
 .container {
     display: grid;
     width: 100%;
@@ -41,7 +42,7 @@ body {
     text-decoration: underline;
     cursor: pointer;
 }
-
+/*Used for the MVP*/
 .in-active{
     padding: 0.5em;
     margin: 0.5em;
@@ -62,13 +63,25 @@ body {
 	font-size: 0.75em;
 }
 
+.content {
+    grid-row: 2 / 4;
+    grid-column: 1 / 3;
+    padding: 1em;
+    background-color: #1f3354;
+    font-family: sans-serif;
+    font-size: 1em;
+    text-align: left;
+    color: #ffffcc;
+    overflow: auto;
+}
+
 .content-link{
-    padding: 0.5em;
-    margin: 0em;
+    padding: auto;
+    margin: auto;
     color: #ffffcc;
     text-decoration: none;
     text-align: center;
-    font-family: arial;
+    font-family: sans-serif;
     font-size: 1em;
 }
 
@@ -89,18 +102,6 @@ body {
     -moz-transition: all 2s ease-in-out;
     -o-transition: all 2s ease-in-out;
     transition: all 2s ease-in-out;
-}
-
-.content {
-    grid-row: 2 / 4;
-    grid-column: 1 / 3;
-    padding: 1em;
-    background-color: #1f3354;
-    font-family: sans-serif;
-    font-size: 1em;
-    text-align: left;
-    color: #ffffcc;
-    overflow: auto;
 }
 
 .footer1 {
@@ -137,11 +138,11 @@ body {
 }
 
 .team {
-	padding: auto;
-	margin: auto;
-    width: 100%;
+	padding: 0em;
+	margin: 0em;
+    width: 75%;
 	color: #ffffcc;
-	text-align: center;
+	text-align: left;
 	font-family: arial;
     font-weight: 900;
 	font-size: 3em;
@@ -152,35 +153,109 @@ body {
 	margin: 0em;
     width: 50%;
 	color: #ffffcc;
-	text-align: center;
+	text-align: left;
 	font-family: arial;
     font-weight: 900;
 	font-size: 1.25em;
 }
 
-
-@media (max-width: 600px) {
-    .content-link, .content {
-        font-size: 0.5em;
+/* At 1600px the Nav items are too big */
+@media (max-width: 1600px) {
+    .nav-items, .emph {
+        font-size: 0.75em;
     }
+}
+
+/* At 1440px the Team Members' names are too big */
+@media (max-width: 1440px) {
+    .team {
+        font-size: 1.75em;
+    }
+}
+
+/* At 1100px the Team Members' names and nav items are too big */
+@media (max-width: 1100px) {
+    .nav-items, .emph {
+        font-size: 0.7em;
+    }
+    .team {
+        font-size: 1em;
+    }
+}
+
+/* At 850px the Team Members' names are too big */
+@media (max-width: 850px) {
+    .nav-items, .emph {
+        font-size: 0.6em;
+    }
+    .team {
+        font-size: 0.75em;
+    }
+}
+
+/* CSS Code for max screen width of 760px */
+@media (max-width: 760px) {
+    /* Setting a new grid for 760px */
+    .container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 100px 1fr 1fr 100px 120px;
+    }
+
+    .nav {
+        grid-row: 1 / 2;
+        grid-column: 1 / 4;
+    }
+
     .nav-items, .in-active, .emph {
         font-size: 0.5em;
         padding: auto;
         margin: auto;
     }
-    .team, .team-logo {
-        font-size: 1em;
+
+    .content {
+        grid-row: 2 / 4;
+        grid-column: 1 / 4;
+        font-size: 0.75em;
     }
-    .container {
-        grid-template-columns: 1fr 1fr 100px;
-        grid-template-rows: 100px 1fr 1fr 150px;
+
+    .content-link {
+        font-size: 0.75em;
     }
+
+    .sidebar {
+        grid-row: 4 / 5;
+        grid-column: 1 / 4;
+        font-size: 0.5em;
+    }
+
     img {
         max-width: 60%;
         max-height: 60%;
     }
-    .footer1, .footer2, .footer3{
-        background-size: 75%;
+
+    .footer1 {
+        grid-row: 5 / 6;
+        grid-column: 1 / 2;
+        background-size:50%;
         background-position: right bottom;
+    }
+
+    .footer2{
+        grid-row: 5 / 6;
+        grid-column: 2 / 3;
+        background-size:50%;
+        background-position: right bottom;
+    }
+
+    .footer3 {
+        grid-row: 5 / 6;
+        grid-column: 3 / 4;
+        background-size:50%;
+        background-position: right bottom;
+    }
+
+    .team, .team-logo {
+        font-size: 1em;
+        width: 50%;
     }
 }
