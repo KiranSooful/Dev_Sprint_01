@@ -98,6 +98,7 @@ body {
     padding: 0 0 0 2px;
     font-family: arial;
     font-size: 1em;
+    overflow: auto;
     position: center;
     -webkit-transition: all 2s ease-in-out;
     -moz-transition: all 2s ease-in-out;
