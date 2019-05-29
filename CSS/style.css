@@ -1,81 +1,87 @@
 /* Main CSS Code for Desktops and standard size laptops */
 body {
-    padding: 200px;
+    padding: 25px;
+    margin: auto;
+    width: 65%;
     background-color: #6d8faa;
     display: flex;
     justify-content: center;
-    padding: 20px;
 }
+
 /* Setting the grid */
 .container {
     display: grid;
     width: 100%;
     height: 900px;
-    grid-template-columns: 1fr 1fr 220px;
+    grid-template-columns: 200px 1fr 1fr 220px;
     grid-template-rows: 60px 1fr 1fr 100px;
     grid-gap: 1rem;
     background-color: #6d8faa;
 }
 
-.nav {
-    grid-row: 1 / 2;
-    grid-column: 1 / 4;
+.site_title {
+    grid-row: 1 / 1;
+    grid-column: 2 / 4;
     background-color: #8CBAE8;
-    display: flex;
+    background-image: url('../images/index.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
 }
 
-.nav-items{
-    padding: 0.5em;
-    margin: 0.5em;
+.emph {
+	margin: 5px 25px;
+	color: #ffffcc;
+	text-align: left;
+	font-family: arial;
+	font-size: 0.75em;
+}
+
+.nav {
+    grid-row: 1 / 5;
+    grid-column: 1 / 2;
+    background-color: #8CBAE8;
+    Text-align: center;
+    overflow: auto;
+}
+
+.nav-items {
+    padding:5px;
+    margin: 10px 10px;
+    background-color: #6d8faa;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 5px 10px 8px #888888;
     color: white;
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
     font-family: arial;
-    font-size: 1em;
-    float: inline-end;
+    font-size: 1.25em;
+    justify-content: center;
+    float: left;
 }
 
-.nav-items:hover{
+.nav-items:hover {
 	transition: color .9s;
     color: #162f66;
     text-decoration: underline;
     cursor: pointer;
 }
-/*Used for the MVP*/
-.in-active{
-    padding: 0.5em;
-    margin: 0.5em;
-    color: #2355BAB3;
-    text-align: center;
-    font-family: arial;
-    font-size: 1em;
-    float: inline-end;
-}
-
-.emph{
-	padding: 0em;
-	margin: auto;
-    width: 100px;
-	color: #ffffcc;
-	text-align: center;
-	font-family: arial;
-	font-size: 0.75em;
-}
 
 .content {
     grid-row: 2 / 4;
-    grid-column: 1 / 3;
+    grid-column: 2 / 4;
     padding: 1em;
     background-color: #1f3354;
     font-family: sans-serif;
     font-size: 1em;
     text-align: left;
-    color: #ffffcc;
+    color: goldenrod;
     overflow: auto;
 }
 
-.content-link{
+.content-link {
     padding: auto;
     margin: auto;
     color: #ffffcc;
@@ -85,33 +91,56 @@ body {
     font-size: 1em;
 }
 
-.content-link:hover{
+.content-link:hover {
     transition: color .9s;
     color: #66e82e;
     text-decoration: underline;
 }
 
 .sidebar {
-    grid-row: 2 / 4;
-    grid-column: 3 / 4;
+    grid-row: 1 / 4;
+    grid-column: 4 / 5;
     background-color: #20ccba;
     padding: 0 0 0 2px;
+    Text-align: center;
+    overflow: auto;
+    background-image: url('../images/sidebar.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.sidebar-item {
+    padding: 2px 1px;
+    margin: 5px 25px;
+    width: 150px;
+    background-color: #6d8faa;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 5px 10px 8px #888888;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
     font-family: arial;
     font-size: 1em;
-    overflow: auto;
-    position: center;
-    -webkit-transition: all 2s ease-in-out;
-    -moz-transition: all 2s ease-in-out;
-    -o-transition: all 2s ease-in-out;
-    transition: all 2s ease-in-out;
+    justify-content: center;
+    float: right;
+}
+
+.sidebar-item:hover {
+	transition: color .9s;
+    color: #162f66;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .footer1 {
     grid-row: 4 / 5;
-    grid-column: 1 / 2;
+    grid-column: 2 / 3;
     padding: 1em;
     background-color: #8CBAE8;
-    background-image: url(Deb.png);
+    background-image: url('../images/Deb.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
@@ -119,10 +148,10 @@ body {
 
 .footer2 {
     grid-row: 4 / 5;
-    grid-column: 2 / 3;
+    grid-column: 3 / 4;
     padding: 1em;
     background-color: #8CBAE8;
-    background-image: url(Kiran.png);
+    background-image: url('../images/Kiran.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
@@ -130,29 +159,29 @@ body {
 
 .footer3 {
     grid-row: 4 / 5;
-    grid-column: 3 / 4;
+    grid-column: 4 / 5;
     padding: 1em;
     background-color: #8CBAE8;
-    background-image: url(TARDIS.jpg);
+    background-image: url('../images/TARDIS.jpg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
 }
 
 .team {
-	padding: 0em;
-	margin: 0em;
+	padding: 5px 5px;
+	margin: 5px 5px;
     width: 75%;
 	color: #ffffcc;
 	text-align: left;
 	font-family: arial;
     font-weight: 900;
-	font-size: 3em;
+	font-size: 2.25em;
 }
 
 .team-logo {
-	padding: 0em;
-	margin: 0em;
+	padding: 1px 5px;
+	margin: 1px 1px;
     width: 50%;
 	color: #ffffcc;
 	text-align: left;
@@ -161,103 +190,152 @@ body {
 	font-size: 1.25em;
 }
 
-/* At 1600px the Nav items are too big */
+/* At 1600px the Nav items and team font are too big */
 @media (max-width: 1600px) {
-    .nav-items, .emph {
+    .emph {
         font-size: 0.75em;
+    }
+
+    .team {
+        font-size: 2em;
+        padding: 1px 5px;
+        margin: 1px 5px;
+    }
+
+    .sidebar-item {
+        padding: 2px 5px;
+        margin: 5px 30px;
+    }
+
+    .limit {
+        max-width: 80%;
     }
 }
 
-/* At 1440px the Team Members' names are too big */
-@media (max-width: 1440px) {
+/* At 1366px the Team Members' names are too big */
+@media (max-width: 1366px) {
     .team {
         font-size: 1.75em;
+    }
+
+    body {
+        width: 85%;
+    }
+
+    .limit {
+        max-width: 80%;
     }
 }
 
 /* At 1100px the Team Members' names and nav items are too big */
 @media (max-width: 1100px) {
-    .nav-items, .emph {
+    .container {
+        grid-template-columns: 190px 1fr 1fr 190px;
+    }
+
+    .emph {
         font-size: 0.7em;
     }
+
+    .nav-items {
+        font-size: 1em;
+        padding: 5px 19px;
+        margin: 20px 10px;
+    }
+
     .team {
         font-size: 1em;
+    }
+
+    body {
+        width: 85%;
+    }
+
+    .team {
+        font-size: 1.5em;
+        padding: 10px 1px;
+        margin: 1px 1px;
+        width: 50%;
+    }
+
+    .footer3 {
+        background-size: 40%;
+    }
+
+    .site_title {
+        background-size: 75%;
+    }
+
+    .sidebar-item {
+        padding: 5px 5px;
+        margin: 5px 20px;
+        width: 130px;
+        font-size: 1em;
+    }
+
+    .limit {
+        max-width: 80%;
     }
 }
 
 /* At 850px the Team Members' names are too big */
 @media (max-width: 850px) {
-    .nav-items, .emph {
+    .container {
+        grid-template-columns: 120px 1fr 1fr 120px;
+        grid-template-rows: 45px 1fr 1fr 100px;
+    }
+
+    body {
+       width: 95%;
+    }
+
+    .emph {
         font-size: 0.6em;
     }
+
+    .nav-items {
+        font-size: 0.8em;
+        padding: 5px 1px;
+        margin: 15px 5px;
+    }
+
+    .sidebar-item {
+        font-size: 0.8em;
+        padding: 5px;
+        margin: 5px 5px;
+    }
+
     .team {
-        font-size: 0.75em;
-    }
-}
-
-/* CSS Code for max screen width of 760px */
-@media (max-width: 760px) {
-    /* Setting a new grid for 760px */
-    .container {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 100px 1fr 1fr 100px 120px;
+        font-size: 1.25em;
     }
 
-    .nav {
-        grid-row: 1 / 2;
-        grid-column: 1 / 4;
+    body {
+        width: 95%
     }
 
-    .nav-items, .in-active, .emph {
-        font-size: 0.5em;
-        padding: auto;
-        margin: auto;
-    }
-
-    .content {
-        grid-row: 2 / 4;
-        grid-column: 1 / 4;
-        font-size: 0.75em;
-    }
-
-    .content-link {
-        font-size: 0.75em;
-    }
-
-    .sidebar {
-        grid-row: 4 / 5;
-        grid-column: 1 / 4;
-        font-size: 0.5em;
-    }
-
-    img {
-        max-width: 60%;
-        max-height: 60%;
-    }
-
-    .footer1 {
-        grid-row: 5 / 6;
-        grid-column: 1 / 2;
-        background-size:50%;
-        background-position: right bottom;
-    }
-
-    .footer2{
-        grid-row: 5 / 6;
-        grid-column: 2 / 3;
-        background-size:50%;
-        background-position: right bottom;
+    .team-logo {
+	   padding: 1px 1px;
+	   font-size: 0.8em;
     }
 
     .footer3 {
-        grid-row: 5 / 6;
-        grid-column: 3 / 4;
-        background-size:50%;
-        background-position: right bottom;
+        background-position: bottom right;
     }
 
-    .team, .team-logo {
-        font-size: 1em;
-        width: 50%;
+    .footer1, .footer2 {
+        background-size: 40%;
+        background-position: bottom right;
+
+    }
+
+    .sidebar-item {
+        padding: 10px 2px;
+        margin: 15px 5px;
+        width: 100px;
+        font-size: 0.8em;
+    }
+    
+    .limit {
+        max-width: 80%;
     }
 }
