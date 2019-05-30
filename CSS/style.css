@@ -309,18 +309,8 @@ body {
         margin: 15px 5px;
     }
 
-    .sidebar-item {
-        font-size: 0.8em;
-        padding: 5px;
-        margin: 5px 5px;
-    }
-
     .team {
         font-size: 1.25em;
-    }
-
-    body {
-        width: 95%
     }
 
     .team-logo {
@@ -347,5 +337,178 @@ body {
 
     .limit {
         max-width: 80%;
+    }
+}
+
+/* for phones */
+@media (max-width: 460px) {
+    body {
+        width: 95%;
+    }
+
+    .container {
+        display: grid;
+        width: 100%;
+        height: 900px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 60px 60px 100px 1fr 1fr 120px 60px;
+        grid-gap: 1rem;
+        background-color: #6d8faa;
+    }
+
+    .site_title {
+        grid-row: 1 / 2;
+        grid-column: 1 / 4;
+        background-color: #8CBAE8;
+        background-image: url('../images/index.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+
+    .emph {
+    	font-size: 0.6em;
+    }
+
+    .nav {
+        grid-row: 2 / 4;
+        grid-column: 1 / 4;
+        background-color: #8CBAE8;
+        Text-align: center;
+        overflow: auto;
+    }
+
+    .nav-items {
+        padding: 5px 5px;
+        margin: 5px 5px;
+        width: 80px;
+        height: 60px;
+        font-size: 0.7em;
+    }
+
+    .content {
+        grid-row: 4 / 6;
+        grid-column: 1 / 4;
+        padding: 1em;
+        background-color: #1f3354;
+        font-family: sans-serif;
+        font-size: 1em;
+        text-align: left;
+        color: goldenrod;
+        overflow: auto;
+    }
+
+    .sidebar {
+        grid-row: 6 / 7;
+        grid-column: 1 / 4;
+        background-color: #20ccba;
+        padding: 0 0 0 2px;
+        Text-align: center;
+        overflow: auto;
+        background-image: url('../images/sidebar.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+
+    .sidebar-item {
+        padding: 1px 10px;
+        margin: 5px 5px;
+        width: 90px;
+        height: 30px;
+        font-size: 0.75em;
+        float: left;
+    }
+
+    .footer1 {
+        grid-row: 7 / 8;
+        grid-column: 1 / 2;
+        padding: 1em;
+        background-color: #8CBAE8;
+        background-image: url('../images/Deb.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+
+    .footer2 {
+        grid-row: 7 / 8;
+        grid-column: 2 / 3;
+        padding: 1em;
+        background-color: #8CBAE8;
+        background-image: url('../images/Kiran.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+
+    .footer3 {
+        grid-row: 7 / 8;
+        grid-column: 3 / 4;
+        padding: 1em;
+        background-color: #8CBAE8;
+        background-image: url('../images/TARDIS.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+
+    .team {
+        padding: 1px 1px;
+	    margin: 1px 1px;
+    	font-size: 0.75em;
+    }
+
+    .team-logo {
+    	padding: 1px 1px;
+    	margin: 1px 1px;
+    	font-size: 0.65em;
+    }
+}
+
+@media (max-width: 360px) {
+    .site_title {
+        background-size: 80%;
+    }
+
+    .emph {
+    	font-size: 0.5em;
+    }
+
+    .nav-items {
+        padding: 5px 5px;
+        margin: 5px 5px;
+        width: 80px;
+        height: 60px;
+        font-size: 0.6em;
+    }
+
+    .sidebar {
+        background-size: 20%;
+    }
+
+    .sidebar-item {
+        padding: 1px 10px;
+        margin: 5px 5px;
+        width: 90px;
+        height: 30px;
+        font-size: 0.6em;
+        float: left;
+    }
+
+    .footer1, .footer2, .footer3 {
+        background-size: 40%;
+    }
+
+    .team {
+        padding: 1px 1px;
+	    margin: 1px 1px;
+    	font-size: 0.6em;
+    }
+
+    .team-logo {
+    	padding: 1px 1px;
+    	margin: 1px 1px;
+    	font-size: 0.6em;
     }
 }

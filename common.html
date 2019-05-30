@@ -22,8 +22,6 @@
                 <span>
                     <a class = "nav-items" href = "index.html">1. Introduction</a>
                 </span>
-                <p>
-                </p>
                 <span>
                     <a class = "nav-items" href = "inclusive.html">2. Inclusive Language</a>
                 </span>
@@ -66,9 +64,24 @@
             </div>
 
             <div class="sidebar">
-                <p>
-                    <img src="images/speech.png" alt="Speech Bubble">
+                <p id="bubble">
+                    <img id ="bubble2" src="images/speech.png" alt="Speech Bubble">
                 </p>
+                <script>
+                    const mq = window.matchMedia('(max-width: 460px)');
+                    if (mq.matches) {
+                      var parent = document.getElementById('bubble');
+                      var child = document.getElementById('bubble2');
+                      parent.removeChild(child);
+                    }
+
+                    const mq2 = window.matchMedia('(min-width: 460px)');
+                    if (mq2.matches) {
+                      var parent = document.getElementById('bubble');
+                      var child = document.getElementById('bubble2');
+                      parent.appendChild(child);
+                    }
+                </script>
                 <p>
                     <a class="sidebar-item" href="#">Community Forum</a>
                 </p>
@@ -87,15 +100,15 @@
             </div>
 
             <div class="footer1">
-                <div class = "team">Deb Burgess</div>
+                <div class="team">Deb Burgess</div>
             </div>
 
             <div class="footer2">
-                <div class = "team">Kiran Sooful</div>
+                <div class="team">Kiran Sooful</div>
             </div>
 
             <div class="footer3">
-                <div class = "team-logo">The TARDIS Project</div>
+                <div class="team-logo">The TARDIS Project</div>
             </div>
         </div>
     </body>
